@@ -1,37 +1,99 @@
-// Dark Mode Toggle
+// =========================
+// Dark Mode
+// =========================
 
-const themeToggle = document.getElementById("themeToggle");
+const themeToggle =
+document.getElementById("themeToggle");
 
 themeToggle.addEventListener("click", () => {
+
     document.body.classList.toggle("dark");
 
-    themeToggle.textContent =
+    localStorage.setItem(
+        "theme",
         document.body.classList.contains("dark")
-        ? "☀️"
-        : "🌙";
+        ? "dark"
+        : "light"
+    );
+
+    themeToggle.textContent =
+    document.body.classList.contains("dark")
+    ? "☀️"
+    : "🌙";
+
 });
 
-// Technology Search
+// Load saved theme
 
-const searchInput = document.getElementById("searchInput");
+if(localStorage.getItem("theme") === "dark"){
 
-if (searchInput) {
-    searchInput.addEventListener("keyup", function () {
-
-        let filter = this.value.toLowerCase();
-
-        let items =
-            document.querySelectorAll(".tech-card");
-
-        items.forEach((item) => {
-
-            let text =
-                item.textContent.toLowerCase();
-
-            item.style.display =
-                text.includes(filter)
-                ? "block"
-                : "none";
-        });
-    });
+    document.body.classList.add("dark");
+    themeToggle.textContent = "☀️";
 }
+
+// =========================
+// Technology Search
+// =========================
+
+const searchInput =
+document.getElementById("searchInput");
+
+if(searchInput){
+
+    searchInput.addEventListener("keyup", () => {
+
+        const filter =
+        searchInput.value.toLowerCase();
+
+        const techCards =
+        document.querySelectorAll(".tech-card");
+
+        techCards.forEach(card => {
+
+            const text =
+            card.textContent.toLowerCase();
+
+            card.style.display =
+            text.includes(filter)
+            ? "block"
+            : "none";
+
+        });
+
+    });
+
+}
+
+// =========================
+// Smooth Fade-in
+// =========================
+
+const observer =
+new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+
+    });
+
+});
+
+document
+.querySelectorAll(
+".card,.timeline-item,.tech-card,.cert-card"
+)
+.forEach(el => {
+
+    el.style.opacity = "0";
+    el.style.transform = "translateY(25px)";
+    el.style.transition = "all .5s ease";
+
+    observer.observe(el);
+
+});
+``
