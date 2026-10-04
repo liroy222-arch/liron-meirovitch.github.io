@@ -3,7 +3,7 @@
     --surface:#ffffff;
     --text:#1e293b;
     --accent:#0F6CBD;
-    --teal:#00796B;
+    --secondary:#00796B;
 }
 
 .dark{
@@ -13,13 +13,13 @@
 }
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    font-family:Inter,Segoe UI,sans-serif;
+    font-family:Segoe UI, sans-serif;
     background:var(--bg);
     color:var(--text);
     line-height:1.6;
@@ -33,10 +33,16 @@ body{
     background:var(--surface);
     position:sticky;
     top:0;
+    z-index:100;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+    list-style:none;
 }
 
 .nav-links a{
-    margin-left:15px;
     text-decoration:none;
     color:var(--text);
 }
@@ -51,38 +57,40 @@ body{
     color:var(--accent);
 }
 
-.hero h2{
-    margin:15px 0;
-}
-
 .hero-buttons{
-    margin-top:25px;
+    margin-top:30px;
 }
 
-.btn,.btn-secondary{
-    text-decoration:none;
-    padding:12px 22px;
+.btn,
+.btn-secondary{
+    display:inline-block;
+    padding:12px 24px;
     border-radius:8px;
+    text-decoration:none;
+    color:white;
     margin:5px;
 }
 
 .btn{
     background:var(--accent);
-    color:white;
 }
 
 .btn-secondary{
-    background:var(--teal);
-    color:white;
+    background:var(--secondary);
 }
 
-.snapshot{
+.snapshot,
+.tech-grid,
+.cert-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
+}
+
+section{
     max-width:1200px;
     margin:auto;
-    padding:40px;
+    padding:60px 20px;
 }
 
 .card,
@@ -92,36 +100,23 @@ body{
     background:var(--surface);
     padding:20px;
     border-radius:12px;
-    box-shadow:0 5px 10px rgba(0,0,0,.08);
-}
-
-section{
-    max-width:1200px;
-    margin:auto;
-    padding:50px 20px;
-}
-
-section h2{
-    color:var(--accent);
-    margin-bottom:20px;
-}
-
-.tech-grid,
-.cert-grid{
-    display:grid;
-    gap:16px;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
 #searchInput{
     width:100%;
-    padding:15px;
-    margin-bottom:25px;
+    padding:12px;
     border-radius:8px;
-    border:1px solid #ccc;
+    border:1px solid #d1d5db;
+    margin-bottom:25px;
 }
 
 footer{
     text-align:center;
-    padding:30px;
+    padding:40px;
+}
+
+#themeToggle{
+    cursor:pointer;
+    padding:10px;
 }
