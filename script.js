@@ -1,0 +1,1 @@
+document.getElementById("themeToggle").onclick=()=>document.body.classList.toggle("dark");const s=document.getElementById('searchInput');if(s){s.addEventListener('input',e=>{document.querySelectorAll('.tech-card').forEach(c=>c.style.display=c.textContent.toLowerCase().includes(e.target.value.toLowerCase())?'block':'none')})}
