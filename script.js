@@ -1,0 +1,1 @@
+document.querySelectorAll("section,.metric,.grid div").forEach((e,i)=>{e.animate([{opacity:0,transform:"translateY(20px)"},{opacity:1,transform:"translateY(0)"}],{duration:700,delay:i*50,fill:"forwards"})});
