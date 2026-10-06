@@ -1,0 +1,1 @@
+Place profile.jpg and Liron_Meirovitch_CV_2026.pdf in the site root and publish to GitHub Pages.
