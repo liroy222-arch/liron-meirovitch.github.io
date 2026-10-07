@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liron Meirovitch | Global IT Manager Portfolio</title>
+    <title>Liron Meirovitch | Global IT Infrastructure Portfolio</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -11,36 +11,37 @@
     <!-- Header Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">LM<span>.portfolio</span></a>
+            <a href="#" class="nav-logo">LM<span>_INFRA</span></a>
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#tech" class="nav-link">Technology</a></li>
+                <li><a href="#tech" class="nav-link">Technology Stack</a></li>
                 <li><a href="#certs" class="nav-link">Certifications</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+            <!-- Mobile Toggle Menu Icon -->
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Executive Summary / Hero Block -->
     <header id="about" class="hero">
         <div class="hero-container">
-            <div class="hero-left">
-                <div class="avatar-placeholder">LM</div>
-            </div>
             <div class="hero-right">
                 <span class="badge">Global IT Manager</span>
                 <h1>Liron Meirovitch</h1>
                 <p class="lead">Global IT Manager with 10+ years of experience leading IT operations, Microsoft 365 environments, identity management, security initiatives, and service delivery across international organizations.</p>
+                
                 <div class="stats-row">
                     <div class="stat-box"><h3>10+</h3><p>Years Experience</p></div>
                     <div class="stat-box"><h3>300+</h3><p>Global Users Managed</p></div>
                     <div class="stat-box"><h3>1K+</h3><p>Endpoint Migrations</p></div>
                 </div>
+
                 <div class="hero-ctas">
-                    <a href="#contact" class="cta-btn primary">Get In Touch</a>
-                    <a href="./Liron_Meirovitch_CV_2026.pdf" target="_blank" class="cta-btn secondary">Download CV</a>
+                    <a href="./Liron_Meirovitch_CV_2026.pdf" target="_blank" class="cta-btn primary">Download CV Archive</a>
+                    <a href="https://linkedin.com" target="_blank" class="cta-btn secondary">Verify LinkedIn Profile</a>
                 </div>
             </div>
         </div>
@@ -115,37 +116,39 @@
 
     <!-- Technical Infrastructure Landscape -->
     <section id="tech" class="section alt-bg">
-        <h2 class="section-title">Technology Portfolio</h2>
-        <div class="tech-grid">
-            
-            <div class="tech-card">
-                <h3>Cloud & Collaboration</h3>
-                <div class="tags">
-                    <span>Microsoft 365</span><span>Azure</span><span>AWS</span><span>Exchange Online</span><span>Teams</span><span>SharePoint</span>
+        <div class="section-container">
+            <h2 class="section-title">Technology Portfolio</h2>
+            <div class="tech-grid">
+                
+                <div class="tech-card">
+                    <h3>Cloud & Collaboration</h3>
+                    <div class="tags">
+                        <span>Microsoft 365</span><span>Azure</span><span>AWS</span><span>Exchange Online</span><span>Teams</span><span>SharePoint</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="tech-card">
-                <h3>Identity & Security</h3>
-                <div class="tags">
-                    <span>Entra ID</span><span>Active Directory</span><span>Conditional Access</span><span>MFA</span><span>SSO</span><span>SAML</span><span>CrowdStrike</span><span>SentinelOne</span><span>Rapid7</span>
+                <div class="tech-card">
+                    <h3>Identity & Security</h3>
+                    <div class="tags">
+                        <span>Entra ID</span><span>Active Directory</span><span>Conditional Access</span><span>MFA</span><span>SSO</span><span>SAML</span><span>CrowdStrike</span><span>SentinelOne</span><span>Rapid7</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="tech-card">
-                <h3>Endpoint & Workplace</h3>
-                <div class="tags">
-                    <span>Intune</span><span>JAMF</span><span>Automox</span><span>Autopilot</span><span>MDM / MAM</span>
+                <div class="tech-card">
+                    <h3>Endpoint & Workplace</h3>
+                    <div class="tags">
+                        <span>Intune</span><span>JAMF</span><span>Automox</span><span>Autopilot</span><span>MDM / MAM</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="tech-card">
-                <h3>Infrastructure & Operations</h3>
-                <div class="tags">
-                    <span>VMware</span><span>Citrix</span><span>Cisco Meraki</span><span>Fortinet</span><span>F5 BIG-IP</span><span>PowerShell</span><span>ITSM</span>
+                <div class="tech-card">
+                    <h3>Infrastructure & Operations</h3>
+                    <div class="tags">
+                        <span>VMware</span><span>Citrix</span><span>Cisco Meraki</span><span>Fortinet</span><span>F5 BIG-IP</span><span>PowerShell</span><span>ITSM</span>
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
 
@@ -185,4 +188,3 @@
                 <div class="c-badge"><span class="c-issuer">IBM</span> Incident Response & Digital Forensics</div>
                 <div class="c-badge"><span class="c-issuer">IBM</span> Penetration Testing & Threat Hunting</div>
                 <div class="c-badge"><span class="c-issuer">IBM</span> Compliance Framework, Standards & Regulations</div>
-                <div class="c-badge"><span class="c-issuer">Johns Hopkins</span> Introduction to DevSecOps</div>
