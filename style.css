@@ -431,14 +431,38 @@ body {
     }
 }
 
+/* 📱 High-Precision Mobile & Tablet Compatibility Engine */
+@media (max-width: 968px) {
+    .hero-container {
+        flex-direction: column; /* Stacks image neatly on phone viewports */
+        text-align: center;
+        gap: 2rem;
+    }
+    .hero-right h1 {
+        font-size: 2.5rem;
+    }
+    .stats-row {
+        gap: 2rem;
+        justify-content: center;
+    }
+    .hero-ctas {
+        justify-content: center;
+    }
+    .time-meta {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 60px;
     }
     .menu-toggle {
-        display: flex;
+        display: flex; /* Displays mobile toggle button instantly */
     }
     
+    /* Mobile overlay navigation drawer transformation */
     .nav-menu {
         position: fixed;
         left: -100%;
