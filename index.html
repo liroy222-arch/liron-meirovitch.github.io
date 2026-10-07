@@ -24,28 +24,33 @@
         </div>
     </nav>
 
-    <!-- Executive Summary / Hero Block -->
+       <!-- Executive Summary / High-Density Hero Block -->
     <header id="about" class="hero">
-        <div class="hero-container">
-            <div class="hero-left" style="flex-shrink: 0;">
-                <img src="./profile.jpg" alt="Liron Meirovitch" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 2px solid var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);">
+        <div class="hero-container" style="gap: 2rem;"> <!-- Tightened element spacing -->
+            <div class="hero-left" style="flex-shrink: 0; margin-top: 0.5rem;">
+                <img src="./profile.jpg" alt="Liron Meirovitch" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);">
             </div>
-            <div class="hero-right">
-                <span class="badge">Global IT Manager</span>
-                <h1>Liron Meirovitch</h1>
-                <p class="lead">Global IT Manager with 10+ years of experience leading IT operations, Microsoft 365 environments, identity management, security initiatives, and service delivery across international organizations.</p>
-                <div class="stats-row">
+            <div class="hero-right" style="text-align: left;">
+                <span class="badge" style="margin-bottom: 0.25rem;">Global IT Manager</span>
+                <h1 style="margin: 0.2rem 0; line-height: 1.1;">Liron Meirovitch</h1>
+                <p class="lead" style="margin-bottom: 1rem; max-width: 740px;">Global IT Manager with 10+ years of experience leading IT operations, Microsoft 365 environments, identity management, security initiatives, and service delivery across international organizations.</p>
+                
+                <div class="stats-row" style="margin-bottom: 1.25rem; gap: 2.5rem;">
                     <div class="stat-box"><h3>10+</h3><p>Years Experience</p></div>
                     <div class="stat-box"><h3>300+</h3><p>Global Users Managed</p></div>
                     <div class="stat-box"><h3>1K+</h3><p>Endpoint Migrations</p></div>
                 </div>
-                <div class="hero-ctas">
-                    <a href="./Liron_Meirovitch_CV_2026.pdf" target="_blank" class="cta-btn primary">Download CV</a>
-                    <a href="https://linkedin.com" target="_blank" class="cta-btn secondary">LinkedIn</a>
+
+                <div class="hero-ctas" style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+                    <!-- Dual CV Download Core Links Array -->
+                    <a href="./Liron_Meirovitch_CV_2026.pdf" target="_blank" class="cta-btn primary" style="padding: 0.55rem 1.25rem;">Download CV (PDF)</a>
+                    <a href="./Liron_Meirovitch_CV_2026.docx" target="_blank" class="cta-btn primary" style="padding: 0.55rem 1.25rem; background: linear-gradient(90deg, var(--neon-cyan), #00a2ff); box-shadow: 0 4px 20px rgba(0, 243, 255, 0.15);">Download CV (Word)</a>
+                    <a href="https://linkedin.com" target="_blank" class="cta-btn secondary" style="padding: 0.55rem 1.25rem;">LinkedIn Profile</a>
                 </div>
             </div>
         </div>
     </header>
+
 
     <!-- Professional Experience Timeline -->
     <section id="experience" class="section">
