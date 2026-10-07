@@ -9,21 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
             mobileMenuBtn.classList.toggle('active');
             
-            // Apply fluid inline rotation tricks to burger spans
+            // Correct array index evaluation targeting the individual burger line spans
             const spans = mobileMenuBtn.querySelectorAll('span');
-            if (mobileMenuBtn.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+            if (spans.length >= 3) {
+                if (mobileMenuBtn.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
             }
         });
     }
 
-    // 2. Proactively Collapse Menu Drawer Automatically When Links are Traversed
+    // 2. Collapse Menu Drawer Automatically When Links are Traversed
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (navMenu.classList.contains('active')) {
@@ -31,9 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileMenuBtn.classList.remove('active');
                 
                 const spans = mobileMenuBtn.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                if (spans.length >= 3) {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
             }
         });
     });
