@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     
-    // 1. Safe Application State Syncing
+    // Check local configuration states
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
-    // 2. Interactive Trigger Logic
+    // Interactive Trigger Event Handling
     themeToggle.addEventListener('click', () => {
         const activeTheme = document.documentElement.getAttribute('data-theme');
         if (activeTheme === 'dark') {
